@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Frontend Warrior – 3-in-1 Task
 
-## Getting Started
+This is a **Frontend Engineering Assessment Project** built with **Next.js 15 App Router**, **Tailwind CSS**, and **React Konva**.  
 
-First, run the development server:
+It contains 3 main pages:
+
+1. **/tasks** – Kanban Task Board  
+2. **/dashboard** – Task Analytics Dashboard with charts  
+3. **/annotate** – Image Annotation Tool
+
+---
+
+## **Features**
+
+### **1. Tasks Page**
+- Kanban board for tasks
+- Create, update, and move tasks between columns
+- Task filter by date
+- Drag-and-drop support
+- Persistent in LocalStorage
+
+### **2. Dashboard Page**
+- Charts showing task statistics:
+  - Tasks per status (Bar chart)
+  - Tasks per day (Line chart)
+  - Task distribution (Pie chart)
+- Responsive and interactive
+- Live data from the task board
+
+### **3. Annotate Page**
+- Display multiple images for annotation
+- Polygon drawing for annotations
+- Hover to highlight polygons
+- Click to select a polygon
+- Delete selected polygon with a button
+- Label/tag polygons when creating them
+- Responsive scaling for all screen sizes
+- Persistent in LocalStorage
+
+---
+
+## **Tech Stack**
+- **Next.js 15 (App Router)**
+- **Tailwind CSS**
+- **Zustand** (State Management)
+- **React-Konva** (Canvas Drawing)
+- **use-image** (Image Loader for Konva)
+- **Recharts** (Charts in Dashboard)
+
+---
+
+## **Setup Instructions**
 
 ```bash
+# 1. Clone Repository
+git clone https://github.com/Mostofa321/frontend-warrior.git
+cd frontend-warrior
+
+# 2. Install Dependencies
+npm install
+
+# 3. Run Development Server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# App will run at http://localhost:3000
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# 4. Build for Production
+npm run build
+npm start
